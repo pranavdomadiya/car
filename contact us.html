@@ -1,139 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact us</title>
-    <style>
-                body{
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Car Expo</title>
 
-                    background-image: url("pexels-brady-knoll-3221165.jpg");
-                    background-size: 100%;
+<style>
 
-                }
-                .navbar {
-    background-color: #a57878;
-    overflow: hidden;
-    height: 60px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-.nav-item {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px ;
-    padding-top: 1px;
-    text-decoration: none;
+body{
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url("pexels-brady-knoll-3221165.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
 }
 
-.nav-item:hover {
-    background-color: #ddd;
-    color: black;
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,0.85);
 }
 
-.content {
-    padding: 20px;
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#4CAF50;
 }
 
-.title {
-    font-size: 30px;
-    color: white;
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #faf8f8;
-    
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
 }
 
-.contact-info {
-    font-size: 16px;
-    color: #070707;
-    margin-bottom: 10px;
+.nav-links a:hover{
+    color:#4CAF50;
 }
 
-.footer {
-    text-align: right;
-    font-size: 12px;
-    color: #666;
-}
-a{
-    text-decoration: none;
-    color: white;
+/* Header */
+
+.header{
+    text-align:center;
+    padding:50px 20px 20px;
 }
 
-form {
-  width: 300px;
-  margin-left: 450px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.header h1{
+    font-size:3rem;
+    color:#4CAF50;
+    margin-bottom:15px;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  color: white;
+.header p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
 }
 
-input[type="text"], input[type="username"], textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
+/* Contact Section */
+
+.contact-container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
 }
 
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+.contact-info,
+.contact-form{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:15px;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+.contact-info h2,
+.contact-form h2{
+    color:#4CAF50;
+    margin-bottom:20px;
 }
 
-h3{
-    color: white;
+.contact-info p{
+    margin-bottom:15px;
+    line-height:1.8;
 }
 
-    </style>
+/* Form */
 
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+.form-group textarea{
+    resize:none;
+    height:120px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#4CAF50;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#45a049;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.9);
+    margin-top:40px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .header h1{
+        font-size:2rem;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
 </head>
 <body>
-    <!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-   <div class="navbar">
-        <div class="nav-item" style="float: left ;"><h2>CONTACT US</h2></div>
-        <div class="nav-item"><h4><a href="comany.html">HOME</a></h4></div>
-        <div class="nav-item"><h4>CONTACT US</h4></div>
-        <div class="nav-item"><h4><a href="About us.html">ABOUT US</a></h4></div>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">CAR EXPO</div>
+
+    <ul class="nav-links">
+        <li><a href="comany.html">Home</a></li>
+        <li><a href="About us.html">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+
+</nav>
+
+<!-- Header -->
+
+<section class="header">
+
+    <h1>Contact Us</h1>
+
+    <p>
+        We are here to help you find information about your favorite cars.
+        Feel free to contact us with any questions, suggestions, or feedback.
+    </p>
+
+</section>
+
+<!-- Contact Section -->
+
+<div class="contact-container">
+
+    <!-- Contact Information -->
+
+    <div class="contact-info">
+
+        <h2>Company Information</h2>
+
+        <p><strong>Company Name:</strong> Car Expo</p>
+
+        <p><strong>Phone:</strong> +91 3930303030</p>
+
+        <p><strong>Helpline:</strong> +91 3949339029</p>
+
+        <p>
+            Car Expo provides detailed information about luxury,
+            sports, SUV, electric, and premium cars from leading
+            automobile brands around the world.
+        </p>
+
     </div>
-  <center>  <div class="content">
-        <div class="title"><h2>Get the info you're looking for right now</h2></div>
-        <div class="subtitle"><h4> COMPANY NAME :-  CAR EXPO</h4><h3>fill the form and contact our site make contact us</h3>
-        <h3>our company number:-02(39303030)</h3><h3>help line number:-3949339029</h3>
-       <h3> our company is main for informing you about cars and their price</h3><h2><center>PLEASE FILL BELOW THE FORM FOR CONTACT US</center></h2></div>
-         </div> </center> 
-         
-         <div> <form action="submit.php" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="username">username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br>
-            <input type="submit" value="Send Message">
-          </form></div>
+
+    <!-- Contact Form -->
+
+    <div class="contact-form">
+
+        <h2>Send Message</h2>
+
+        <form action="submit.php" method="post">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Car Expo | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
