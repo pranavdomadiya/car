@@ -1,96 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-image:url("about 2.jpg") ;
-  background-size: 100%;
-  
-}
-.navbar {
-    background-color: #a57878;
-    overflow: hidden;
-    height: 60px;
-    width: 100%;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Expo - About Us</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-.nav-item {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px ;
-    padding-top: 1px;
-    text-decoration: none;
+body{
+    background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+                url("about 2.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+    color:white;
 }
 
-.nav-item:hover {
-    background-color: #ddd;
-    color: black;
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(5px);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-
-
-header {
-  text-align: center;
-  margin-bottom: 30px;
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#ff4d4d;
 }
 
-h1 {
-  color: #3897f6;
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
-.h2 {
-  margin-top: 30px;
-  color: #3797f8 ;
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
 }
 
-p {
-  margin-bottom: 20px;
-  color: white;
+.nav-links a:hover{
+    color:#ff4d4d;
 }
 
-a{
-    color: white;
-    text-decoration: none ;
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px 40px;
 }
-    </style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kawn - Global Learning Transformation</title>
-  <link rel="stylesheet" href="styles.css">
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+    color:#ff4d4d;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+    color:#ddd;
+}
+
+/* Content */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:30px 0 60px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    padding:30px;
+    transition:0.4s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#ff4d4d;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#f1f1f1;
+    line-height:1.8;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.8);
+    color:#ccc;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .nav-links{
+        margin-top:10px;
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .card{
+        padding:20px;
+    }
+}
+</style>
 </head>
-<body>
-  <header>
-    <nav>
-    <div class="navbar">
-        <div class="nav-item" style="float: left ;"><h2>ABOUT US</h2></div>
-        <div class="nav-item"><h4><a href="comany.html">HOME</a></h4></div>
-        <div class="nav-item"><h4><a href="contact us.html">CONTACT US</a></h4></div>
-        <div class="nav-item"><h4>ABOUT US</h4></div>
-    </div>
-    </nav>
-    </header>
-  <center>
-    <h1>CAR EXPO: CENTER OF CAR INFORMATION</h1>
-  
-  <main>
-    <section>
-      <h2 class="h2">How it started</h2>
-      <p> car expo is the company of the informatuon of the car you want its<br> provide many deatails you want its best way to know about cars  beacuse <br>its last gentration of disale carsSS
-         The community of<br> age was connected bythe desire to enhance 3.5 stenence for 23,<br>
-          with 830+ 100K learners.</p>
-    </section>
-    <section>
-      <h2 class="h2">Our Dream</h2> 
 
-      <p>OUR DREAM TO BUY PORFECT CAR FOR OUR FAMILY AND FOR OUR ENJOYBMW became <br>an automobile manufacturer in 1928 when it purchased Fahrzeugfabrik <br>Eisenach, which, at the time, built the Austin 7 under licencebr
-         from Dixi <br> The first car sold as a BMW was a rebadged BMW Dixi <br>called the BMW 3/15, following BMW's acquisition of thebr
-         <br> car manufacturer Automobilwerk Eisenach </p>
-    </section>
-  </main>
-  </center>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">CAR EXPO</div>
+
+    <ul class="nav-links">
+        <li><a href="company.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>CAR EXPO</h1>
+    <p>
+        Your trusted destination for exploring car information,
+        specifications, features, reviews, and the latest automobile trends.
+    </p>
+</section>
+
+<!-- About Content -->
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>🚗 How It Started</h2>
+            <p>
+                Car Expo was created with a simple mission: to provide
+                automobile enthusiasts and buyers with accurate and detailed
+                information about cars. We help users compare models,
+                explore specifications, and make informed decisions before
+                purchasing their dream vehicle.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🌟 Our Dream</h2>
+            <p>
+                Our dream is to become the most trusted car information
+                platform. We aim to help every family and car enthusiast
+                find the perfect vehicle by providing reliable details,
+                reviews, and insights about modern and classic automobiles.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    © 2026 Car Expo | All Rights Reserved
+</footer>
+
 </body>
 </html>
