@@ -3,89 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Page</title>
+<title>Car Expo Login</title>
+
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("car 1.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.login-container{
+    width:90%;
+    max-width:900px;
+    background:rgba(0,0,0,0.85);
+    display:flex;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,123,255,0.5);
+}
+
+/* Left Side */
+
+.login-form{
+    flex:1;
+    padding:40px;
+    color:white;
+}
+
+.login-form h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#007bff;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#007bff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
+
+.register{
+    text-align:center;
+    margin-top:20px;
+}
+
+.register a{
+    color:#007bff;
+    text-decoration:none;
+}
+
+/* Right Side */
+
+.login-image{
+    flex:1;
+}
+
+.login-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .login-container{
+        flex-direction:column;
     }
 
-    .container {
-        width: 800px;
-        height: 400px;
-        margin: 400px auto;
-        padding: 10px;
-        background-color: #060606;
-        border-radius:100px;
-        border: 10px;
-        border-color: rgb(39, 128, 206);
-        box-shadow: 0 20px 30px rgba(47, 47, 205, 0.941);
-        color: white;
-        border-radius: 10px;
-        
-   }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"] {
-        width: 200px;
-        padding: 10px;
-        margin: 5px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        border-radius: 10px;
+    .login-image{
+        height:250px;
     }
 
-    button[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-        size: 100px;
+    .login-form{
+        padding:25px;
     }
-    img{
-        width: 410px;
-        height: 400px;
+}
 
-    }
-    .pd{
-        width: 120px;
-        height: 30px;
-        margin-left: 130px;
-        border-radius: 100px;
-        background-color: #007bff;
-        border-color: #007bff;
-    }
-    
 </style>
 </head>
 <body>
-            
-<table class="container">
-    <tr>
-        <td>
-    <h1>Login </h1>
-    <br>
-    
-    <form action="comany.html" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <br>
-        
-   
-        <button  type="submit" class="pd" class="btn">login</button>
-    </form>
-    
-    <center> <p style="color: white;"> if you not Registred? <a href="register page.html">Register Now</a></p></center></td>
-<td>
-      <img src="car 1.jpg"/>
-  </td>
-  </tr>
-</table>
+
+<div class="login-container">
+
+    <div class="login-form">
+
+        <h1>Login</h1>
+
+        <form action="company.html" method="post">
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+        </form>
+
+        <div class="register">
+            Not Registered?
+            <a href="register page.html">Register Now</a>
+        </div>
+
+    </div>
+
+    <div class="login-image">
+        <img src="car 1.jpg" alt="Car">
+    </div>
+
+</div>
+
 </body>
 </html>
