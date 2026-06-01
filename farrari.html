@@ -1,149 +1,273 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferrari Collection - Car Expo</title>
+
 <style>
 
-  
-
-
-img{
-
-     width:200px;
-     height: 200px;
-     margin-left: 80px;
-     border-radius: 10px;
-     
-     
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-        
-        background-image: url("ferrari logo 2.0.jpg") ;
-        background-size: 100%;
-        
-       
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url("ferrari logo 2.0.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
 }
 
-table{
-    padding-top: 100px;
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,0.85);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-input[type="button"]:hover{
-    transform: translateY(-5px);
-    background-color: white;
-    color: #4CAF50;
- }
-
-img:hover{
-     
-    scale: 1.2;
+.logo a{
+    color:white;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:bold;
 }
 
-
-td{
-    color: white;
-    padding-left: 80px;
+.logo span{
+    color:#ff3333;
 }
 
-h2,h3,h5{
-
-    padding-left: 80px;
+.nav-links{
+    display:flex;
+    gap:25px;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
 }
 
-input[type="button"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  margin-left: 1px;}
-
-  .nav-item {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding:  16px;
-    padding-top: 1px;
-    text-decoration: none;
+.nav-links a:hover{
+    color:#ff3333;
 }
-.navbar {
-    background-color: #d39999;
-    overflow: hidden;
-    height: 60px;
-    
-    width: 1250px;
-}
-.nav-item:hover {
-    background-color: #ddd;
-    color: black;}
-  
 
+/* Title */
+
+.page-title{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.page-title h1{
+    font-size:3rem;
+    color:#ff3333;
+}
+
+/* Cards */
+
+.car-container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding-bottom:50px;
+}
+
+.car-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(8px);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.car-card:hover{
+    transform:translateY(-10px);
+}
+
+.car-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.car-card:hover img{
+    transform:scale(1.08);
+}
+
+.car-info{
+    padding:20px;
+    text-align:center;
+}
+
+.car-info h2{
+    margin-bottom:10px;
+}
+
+.spec{
+    color:#ddd;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#4CAF50;
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:10px 25px;
+    background:#ff3333;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#cc0000;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.85);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .page-title h1{
+        font-size:2rem;
+    }
+}
 
 </style>
 </head>
 <body>
 
+<!-- Navbar -->
 
-    <header>
-        <div class="navbar">
-          <div class="nav-item" style="float: left ;"><h1><a href="comany.html">CAR EXPO</a></h1></div></div></header>
-          
-<table class="shadow">
-    
-        
-    <tr>
-        <td ><img src="F roma.webp"><br>
-         <h2>FERRARI ROMA </h2>
-            <h3>8 kmpl|645 bhp </h3>
-        <h3> Rs 5.40 crore</h3> <h5><a href="https://www.ferrari.com/en-EN/auto/ferrari-roma"><input type="button" value=" 0n ward"> </a></h5>  </td>
-    
+<nav class="navbar">
 
-    
-        <td ><img src="F portofino.webp"><br>
-        <h2>FERRARI PORTOFINO</a>  </h2>
-            <h3> 8 kmpl|591 bhp</h3>
-        <h3> Rs 3.50 crore</h3> <h5><a href="https://www.ferrari.com/en-EN/auto/ferrari-portofino-m"><input type="button" value="0n ward "></h5>  </td>
-    
+    <div class="logo">
+        <a href="comany.html">CAR <span>EXPO</span></a>
+    </div>
 
-    
-        <td ><img src="F f8 tributo.webp"><br>
-        <h2>FERRARI F8 TRIBUTO</a> </h2>
-            <h3>7 kmpl|711bhp</h3>
-        <h3> Rs 4.02 crore</h3> <h5><a href="https://www.ferrari.com/en-EN/auto/f8-tributo"><input type="button" value="0n ward "></h5>  </td>
-    </tr>
+    <div class="nav-links">
+        <a href="comany.html">Home</a>
+        <a href="About us.html">About</a>
+        <a href="contact us.html">Contact</a>
+    </div>
 
-    <tr>
-        <td ><img src="F 296 gts.webp"><br>
-        <h2>FERRARI 296 GTS</a></h2>
-            <h3>| 663 bhp|</h3>
-        <h3> Rs  6.24 crore</h3> <h5><a href="https://www.ferrari.com/en-EN/auto/296-gts"><input type="button" value=" 0n ward"></h5>  </td>
-    
+</nav>
 
-    
-        <td ><img src="F 296 gtb.webp"><br>
-        <h2>FERRARI 296 GTB</a></h2>
-            <h3>|645 bhp| </h3>
-        <h3> Rs 5.40 crore</h3> <h5><a href="https://www.ferrari.com/en-EN/auto/296-gtb"><input type="button" value="0n ward"></h5>  </td>
-    </tr>
-    
+<!-- Title -->
 
-    
-  
-  
+<div class="page-title">
+    <h1>Ferrari Collection</h1>
+</div>
 
+<!-- Cars -->
 
+<div class="car-container">
 
+    <div class="car-card">
+        <img src="F roma.webp" alt="Ferrari Roma">
+        <div class="car-info">
+            <h2>Ferrari Roma</h2>
+            <p class="spec">8 kmpl | 645 bhp</p>
+            <div class="price">₹5.40 Crore</div>
+            <a href="https://www.ferrari.com/en-EN/auto/ferrari-roma" class="btn">
+                View Details
+            </a>
+        </div>
+    </div>
 
+    <div class="car-card">
+        <img src="F portofino.webp" alt="Ferrari Portofino">
+        <div class="car-info">
+            <h2>Ferrari Portofino</h2>
+            <p class="spec">8 kmpl | 591 bhp</p>
+            <div class="price">₹3.50 Crore</div>
+            <a href="https://www.ferrari.com/en-EN/auto/ferrari-portofino-m" class="btn">
+                View Details
+            </a>
+        </div>
+    </div>
 
+    <div class="car-card">
+        <img src="F f8 tributo.webp" alt="Ferrari F8 Tributo">
+        <div class="car-info">
+            <h2>Ferrari F8 Tributo</h2>
+            <p class="spec">7 kmpl | 711 bhp</p>
+            <div class="price">₹4.02 Crore</div>
+            <a href="https://www.ferrari.com/en-EN/auto/f8-tributo" class="btn">
+                View Details
+            </a>
+        </div>
+    </div>
 
-</table>
+    <div class="car-card">
+        <img src="F 296 gts.webp" alt="Ferrari 296 GTS">
+        <div class="car-info">
+            <h2>Ferrari 296 GTS</h2>
+            <p class="spec">663 bhp</p>
+            <div class="price">₹6.24 Crore</div>
+            <a href="https://www.ferrari.com/en-EN/auto/296-gts" class="btn">
+                View Details
+            </a>
+        </div>
+    </div>
+
+    <div class="car-card">
+        <img src="F 296 gtb.webp" alt="Ferrari 296 GTB">
+        <div class="car-info">
+            <h2>Ferrari 296 GTB</h2>
+            <p class="spec">645 bhp</p>
+            <div class="price">₹5.40 Crore</div>
+            <a href="https://www.ferrari.com/en-EN/auto/296-gtb" class="btn">
+                View Details
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Car Expo | Ferrari Collection</p>
+</footer>
 
 </body>
 </html>
