@@ -1,163 +1,287 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porsche Collection | Car Expo</title>
+
 <style>
 
-  
-
-
-img{
-
-     width:200px;
-     height: 200px;
-     margin-left: 80px;
-     border-radius: 10px;
-    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-        border:10px;
-        border-color: black;
-        background-image: url("porbg.jpg");
-        
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url("porbg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
 }
 
-.shadow{
+/* Navbar */
 
-    box-shadow: 0 20px 30px rgba(69, 69, 186, 0.941);
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,0.9);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
+.logo a{
+    text-decoration:none;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
 
-img:hover{
-     
-     scale: 1.2;
-     
- }
+.logo span{
+    color:#d4af37;
+}
 
- input[type="button"]:hover{
-    transform: translateY(-5px);
-    background-color: white;
-    color: #4CAF50;
- }
- 
- 
-   
- td{
-     color: white;
-     padding-left: 50px;
- }
- table{
-        padding-top: 100px;
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+/* Title */
+
+.page-title{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.page-title h1{
+    font-size:3rem;
+    color:#d4af37;
+}
+
+/* Car Cards */
+
+.car-container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding-bottom:50px;
+}
+
+.car-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.car-card:hover{
+    transform:translateY(-10px);
+}
+
+.car-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.car-card:hover img{
+    transform:scale(1.08);
+}
+
+.car-info{
+    padding:20px;
+    text-align:center;
+}
+
+.car-info h2{
+    margin-bottom:10px;
+}
+
+.spec{
+    color:#ddd;
+}
+
+.price{
+    color:#4CAF50;
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:10px 25px;
+    background:#d4af37;
+    color:black;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.9);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
     }
- 
- h2,h3,h5{
- 
-     padding-left: 80px;
- }
- 
- a{
-     text-decoration: none;
-     color: white;
- 
- }
- input[type="button"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  width: 150px;
-  margin-left: 1px;}
 
-  .nav-item {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding:  16px;
-    padding-top: 1px;
-    text-decoration: none;
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .page-title h1{
+        font-size:2rem;
+    }
 }
-.navbar {
-    background-color: #d39999;
-    overflow: hidden;
-    height: 60px;
-    
-    width: 1250px;
-}
-.nav-item:hover {
-    background-color: #ddd;
-    color: black;}
-  
+
 </style>
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-          <div class="nav-item" style="float: left ;"><h1><a href="comany.html">CAR EXPO</a></h1></div></div></header>
-          
-<table>
-   
-    <tr>
-        <td ><img src="porsche 911.webp"><br>
-        <h2></a> PORSCHE 911</h2>
-            <h3>7-11 kmpl|380-641 bhp</h3>
-        <h3> Rs 1.86 crore</h3> <h5><a href="https://www.porsche.com/international/models/911/"><input type="button" value=" on wards"> </a></h5>  </td>
-    
+<nav class="navbar">
 
-    
-        <td ><img src="porsche macan.webp"><br>
-        <h2></a>  PORSCHE MACAN</h2>
-            <h3>10-11 kmpl|241-434 bhp</h3>
-        <h3> Rs  88.06 lakh</h3> <h5><a href="https://www.porsche.com/international/models/macan/macan-models/macan/"><input type="button" value=" on wards"> </a></h5>  </td>
-    
+    <div class="logo">
+        <a href="comany.html">CAR <span>EXPO</span></a>
+    </div>
 
-    
-        <td ><img src="porsche cayenne.webp"><br>
-        <h2></a> PORSCHE CAYENNE</h2>
-            <h3>8-41 kmpl|335-550 bhp</h3>
-        <h3> Rs 1.36 crore</h3> <h5><a href="https://www.porsche.com/international/models/cayenne/"><input type="button" value=" on wards"> </a></h5>  </td>
-    </tr>
+    <div class="nav-links">
+        <a href="comany.html">Home</a>
+        <a href="About us.html">About</a>
+        <a href="contact us.html">Contact</a>
+    </div>
 
-    <tr>
-        <td ><img src="porsche 718.webp"><br>
-        <h2></a> PORSCHE 718</h2>
-            <h3>7-14 kmpl|295 -493 bhp</h3>
-        <h3> Rs 1.48 crore</h3> <h5><a href="https://www.porsche.com/international/models/718/"><input type="button" value=" on wards"> </a></h5>  </td>
-    
+</nav>
 
-    
-        <td ><img src="porsche panamera.webp"><br>
-        <h2></a>  PORSCHE PANAMERA</h2>
-            <h3>349 bhp|</h3>
-        <h3> Rs  1.68 crore</h3> <h5><a href="https://www.porsche.com/international/models/panamera/"><input type="button" value=" on wards"> </a></h5>  </td>
-    
+<div class="page-title">
+    <h1>Porsche Collection</h1>
+</div>
 
-    
-        <td ><img src="porsche taycan.webp"><br>
-        <h2></a>  PORSCHE TAYCAN</h2>
-            <h3>-|-</h3>
-        <h3> Rs  1.61 crore</h3> <h5><a href="https://www.porsche.com/middle-east/_india_/models/taycan/all-models/"><input type="button" value=" on wards"> </a></h5>  </td>
-    </tr>
+<div class="car-container">
 
-    <tr>
-        <td ><img src="poesche taycan cross turismo.webp"><br>
-        <h2></a> PORSCHE TAYCAN CROSS TURISMO</h2>
-            <h3>-|-</h3>
-        <h3> Rs  1.82 crore</h3> <h5><a href="https://www.porsche.com/usa/models/taycan/taycan-cross-turismo-models/taycan-4-cross-turismo/"><input type="button" value=" on wards"> </a></h5>  </td>
-    
+    <div class="car-card">
+        <img src="porsche 911.webp" alt="Porsche 911">
+        <div class="car-info">
+            <h2>Porsche 911</h2>
+            <p class="spec">7-11 kmpl | 380-641 bhp</p>
+            <div class="price">₹1.86 Crore</div>
+            <a href="https://www.porsche.com/international/models/911/" class="btn">View Details</a>
+        </div>
+    </div>
 
-    
-        <td ><img src="poesche macan turbo ev.webp"><br>
-        <h2></a> PORSCHE MACAN TURBO EV</h2>
-            <h3>-|5 star safety</h3>
-        <h3> Rs 1.65 crore</h3> <h5><a href="https://www.porsche.com/usa/models/macan/macan-electric-models/macan-4-electric/"><input type="button" value=" on wards"> </a></h5>  </td>
-    </tr>
+    <div class="car-card">
+        <img src="porsche macan.webp" alt="Porsche Macan">
+        <div class="car-info">
+            <h2>Porsche Macan</h2>
+            <p class="spec">10-11 kmpl | 241-434 bhp</p>
+            <div class="price">₹88.06 Lakh</div>
+            <a href="https://www.porsche.com/international/models/macan/" class="btn">View Details</a>
+        </div>
+    </div>
 
+    <div class="car-card">
+        <img src="porsche cayenne.webp" alt="Porsche Cayenne">
+        <div class="car-info">
+            <h2>Porsche Cayenne</h2>
+            <p class="spec">8-41 kmpl | 335-550 bhp</p>
+            <div class="price">₹1.36 Crore</div>
+            <a href="https://www.porsche.com/international/models/cayenne/" class="btn">View Details</a>
+        </div>
+    </div>
 
+    <div class="car-card">
+        <img src="porsche 718.webp" alt="Porsche 718">
+        <div class="car-info">
+            <h2>Porsche 718</h2>
+            <p class="spec">7-14 kmpl | 295-493 bhp</p>
+            <div class="price">₹1.48 Crore</div>
+            <a href="https://www.porsche.com/international/models/718/" class="btn">View Details</a>
+        </div>
+    </div>
 
+    <div class="car-card">
+        <img src="porsche panamera.webp" alt="Porsche Panamera">
+        <div class="car-info">
+            <h2>Porsche Panamera</h2>
+            <p class="spec">349 bhp</p>
+            <div class="price">₹1.68 Crore</div>
+            <a href="https://www.porsche.com/international/models/panamera/" class="btn">View Details</a>
+        </div>
+    </div>
 
+    <div class="car-card">
+        <img src="porsche taycan.webp" alt="Porsche Taycan">
+        <div class="car-info">
+            <h2>Porsche Taycan</h2>
+            <p class="spec">Electric Vehicle</p>
+            <div class="price">₹1.61 Crore</div>
+            <a href="https://www.porsche.com/international/models/taycan/" class="btn">View Details</a>
+        </div>
+    </div>
 
-</table>
+    <div class="car-card">
+        <img src="poesche taycan cross turismo.webp" alt="Taycan Cross Turismo">
+        <div class="car-info">
+            <h2>Taycan Cross Turismo</h2>
+            <p class="spec">Electric Vehicle</p>
+            <div class="price">₹1.82 Crore</div>
+            <a href="#" class="btn">View Details</a>
+        </div>
+    </div>
+
+    <div class="car-card">
+        <img src="poesche macan turbo ev.webp" alt="Macan Turbo EV">
+        <div class="car-info">
+            <h2>Macan Turbo EV</h2>
+            <p class="spec">Electric SUV</p>
+            <div class="price">₹1.65 Crore</div>
+            <a href="#" class="btn">View Details</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Car Expo | Porsche Collection</p>
+</footer>
 
 </body>
 </html>
